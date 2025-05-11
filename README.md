@@ -1,3 +1,5 @@
+# React App with Instragram like reel features, which shows bunch of videos/reels while scrolling top to bottom
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
