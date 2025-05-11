@@ -133,36 +133,8 @@ export default function Videos() {
     threshold: 1.0,
   };
 
-  //   let observer = new IntersectionObserver((entries, observer) => {
-  //     entries.forEach((entry) => {
-  //       console.log(entry.isIntersecting, entry.intersectionRatio);
-  //       let videoEl = entry.target;
-  //       // videoEl.play().then(() => {
-  //       //     if(!videoEl.paused && !entry.isIntersecting){
-  //       //         videoEl.pause()
-  //       //     }
-  //       // })
-  //       let isPlaying =
-  //         videoEl.currentTime > 0 && !videoEl.paused && !videoEl.ended;
-  //       if (entry.isIntersecting) {
-  //         entry.target.play();
-  //       } else if (isPlaying) {
-  //         entry.target.pause();
-  //       }
-  //     }, options);
-  //   });
-
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      console.log(entry.isIntersecting, entry.intersectionRatio);
-      //   let videoEl = entry.target;
-      // videoEl.play().then(() => {
-      //     if(!videoEl.paused && !entry.isIntersecting){
-      //         videoEl.pause()
-      //     }
-      // })
-      //   let isPlaying =
-      //     videoEl.currentTime > 0 && !videoEl.paused && !videoEl.ended;
       if (entry.isIntersecting) {
         entry.target.play();
       } else {
@@ -178,14 +150,6 @@ export default function Videos() {
       const element = target[index];
       observer.observe(element);
     }
-    // return () => {
-    //     for (let index = 0; index < target.length; index++) {
-    //         const element = target[index];
-    //         observer.unobserve(element);
-    //     }
-    // }
-    // observer.observe(target);
-    // console.log(target);
   }, []);
 
   return (
@@ -201,41 +165,6 @@ export default function Videos() {
           ></video>
         );
       })}
-      {/* <video
-        className="video-item"
-        muted="muted"
-        key={videoData[0].id}
-        src={videoData[0].videoUrl}
-        controls
-      ></video>
-      <video
-        className="video-item"
-        muted="muted"
-        key={videoData[1].id}
-        src={videoData[1].videoUrl}
-        controls
-      ></video>
-      <video
-        className="video-item"
-        muted="muted"
-        key={videoData[2].id}
-        src={videoData[2].videoUrl}
-        controls
-      ></video>
-      <video
-        className="video-item"
-        muted="muted"
-        key={videoData[3].id}
-        src={videoData[3].videoUrl}
-        controls
-      ></video>
-      <video
-        className="video-item"
-        muted="muted"
-        key={videoData[4].id}
-        src={videoData[4].videoUrl}
-        controls
-      ></video> */}
     </div>
   );
 }
